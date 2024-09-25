@@ -1,0 +1,53 @@
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    //    id 'java'
+    id 'application'
+}
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+dependencies {
+    // Use JUnit Jupiter for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+
+    //Gradle
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation 'org.seleniumhq.selenium:selenium-java:4.23.0'
+
+    //WebDriverManager
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    implementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
+
+    //TestNG
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation 'org.testng:testng:7.10.2'
+
+    //Cucumber
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    implementation 'io.cucumber:cucumber-java:7.18.1'
+
+    //Cucumber JAVA Unit > debe tener la misma version q el de arriba
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
+    testImplementation 'io.cucumber:cucumber-junit:7.18.1'
+    //p reportes agrego
+    implementation group: 'com.aventstack', name: 'extentreports-cucumber4-adapter', version: '1.0.7'
+}
+
+// application{
+//     mainClass = 'SeleniumFree'
+// }
+
+
+tasks.named('test') {
+  systemProperty "cucumber.options", System.getProperty("cucumber.options")
+  systemProperties System.getProperties(); //q lea las propiedades del sistema xq le voy a estar pasando un tag
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile){
+    options.encoding = 'UTF-8'
+}

@@ -1,0 +1,220 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 268435456 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3548), pid=3892, tid=8980
+#
+# JRE version:  (17.0.12+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (17.0.12+8-LTS-286, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dcucumber.options -Dfile.separator=\ -Djava.class.version=61.0 -Djava.home=D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12 -Djava.library.path=D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;%JAVA_HOME%\bin;D:\bk compu\bk compu\bk compu\vv\java\gradle-8.9\bin;D:\bk compu\bk compu\bk compu\vv\java\selenium;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\casa\AppData\Local\Microsoft\WindowsApps;D:\Users\casa\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\casa\AppData\Roaming\npm;. -Djava.runtime.name=Java(TM) SE Runtime Environment -Djava.runtime.version=17.0.12+8-LTS-286 -Djava.specification.name=Java Platform API Specification -Djava.specification.vendor=Oracle Corporation -Djava.specification.version=17 -Djava.vendor=Oracle Corporation -Djava.vendor.url=https://java.oracle.com/ -Djava.vendor.url.bug=https://bugreport.java.com/bugreport/ -Djava.version=17.0.12 -Djava.version.date=2024-07-16 -Djava.vm.compressedOopsMode=32-bit -Djava.vm.info=mixed mode, sharing -Djava.vm.name=Java HotSpot(TM) 64-Bit Server VM -Djava.vm.specification.name=Java Virtual Machine Specification -Djava.vm.specification.vendor=Oracle Corporation -Djava.vm.specification.version=17 -Djava.vm.vendor=Oracle Corporation -Djava.vm.version=17.0.12+8-LTS-286 -Djdk.debug=release -Dlibrary.jansi.path=C:\Users\casa\.gradle\native\jansi\1.18\windows64 -Dline.separator=
+ -Dnative.encoding=Cp1252 -Dorg.gradle.appname=gradle -Dorg.gradle.internal.worker.tmpdir=D:\bk compu\bk compu\bk compu\automation\proyectos\SeleniumFree\build\tmp\test\work -Dos.arch=amd64 -Dos.name=Windows 10 -Dos.version=10.0 -Dpath.separator=; -Dsun.arch.data.model=64 -Dsun.boot.library.path=D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12\bin -Dsun.cpu.endian=little -Dsun.cpu.isalist=amd64 -Dsun.io.unicode.encoding=UnicodeLittle -Dsun.jnu.encoding=Cp1252 -Dsun.management.compiler=HotSpot 64-Bit Tiered Compilers -Dsun.os.patch.level -Duser.dir=D:\bk compu\bk compu\bk compu\automation\proyectos\SeleniumFree -Duser.home=C:\Users\casa -Duser.name=casa -Duser.script -Duser.timezone=America/Buenos_Aires -Xmx512m -Dfile.encoding=Cp1252 -Djava.io.tmpdir=C:\Users\casa\AppData\Local\Temp\ -Duser.country=419 -Duser.language=es -Duser.variant -ea worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 12'
+
+Host: AMD Ryzen 7 3700X 8-Core Processor             , 16 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.4597)
+Time: Fri Aug  9 17:06:59 2024 Hora estándar de Argentina elapsed time: 0.006770 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001bdc8229ab0):  JavaThread "Unknown thread" [_thread_in_vm, id=8980, stack(0x0000001dfe900000,0x0000001dfea00000)]
+
+Stack: [0x0000001dfe900000,0x0000001dfea00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67a04a]
+V  [jvm.dll+0x7da4ed]
+V  [jvm.dll+0x7dbe33]
+V  [jvm.dll+0x7dc4a3]
+V  [jvm.dll+0x24508f]
+V  [jvm.dll+0x677089]
+V  [jvm.dll+0x66bd32]
+V  [jvm.dll+0x301fa6]
+V  [jvm.dll+0x309546]
+V  [jvm.dll+0x359d2e]
+V  [jvm.dll+0x359f5f]
+V  [jvm.dll+0x2d9078]
+V  [jvm.dll+0x2d9fe4]
+V  [jvm.dll+0x7aca21]
+V  [jvm.dll+0x367591]
+V  [jvm.dll+0x78b999]
+V  [jvm.dll+0x3ec83f]
+V  [jvm.dll+0x3ee471]
+C  [jli.dll+0x5297]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17374]
+C  [ntdll.dll+0x4cc91]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffed3aa7a18, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001bdc825d530 GCTaskThread "GC Thread#0" [stack: 0x0000001dfea00000,0x0000001dfeb00000] [id=19808]
+  0x000001bdc8261220 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000001dfeb00000,0x0000001dfec00000] [id=13176]
+  0x000001bdc8262180 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000001dfec00000,0x0000001dfed00000] [id=18824]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffed32d9b67]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001bdc8224350] Heap_lock - owner thread: 0x000001bdc8229ab0
+
+Heap address: 0x00000000e0000000, size: 512 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x00000000e0000000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffed36c3859]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.004 Loaded shared library D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff77dbb0000 - 0x00007ff77dbc0000 	D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12\bin\java.exe
+0x00007fff49bd0000 - 0x00007fff49dc8000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007fff499a0000 - 0x00007fff49a61000 	C:\Windows\System32\KERNEL32.DLL
+0x00007fff47440000 - 0x00007fff47736000 	C:\Windows\System32\KERNELBASE.dll
+0x00007fff478a0000 - 0x00007fff479a0000 	C:\Windows\System32\ucrtbase.dll
+0x00007fff22670000 - 0x00007fff2268b000 	D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12\bin\VCRUNTIME140.dll
+0x00007fff25510000 - 0x00007fff25529000 	D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12\bin\jli.dll
+0x00007fff483d0000 - 0x00007fff48480000 	C:\Windows\System32\ADVAPI32.dll
+0x00007fff48190000 - 0x00007fff4822e000 	C:\Windows\System32\msvcrt.dll
+0x00007fff485e0000 - 0x00007fff48680000 	C:\Windows\System32\sechost.dll
+0x00007fff48af0000 - 0x00007fff48c13000 	C:\Windows\System32\RPCRT4.dll
+0x00007fff472b0000 - 0x00007fff472d7000 	C:\Windows\System32\bcrypt.dll
+0x00007fff47f50000 - 0x00007fff480ef000 	C:\Windows\System32\USER32.dll
+0x00007fff47280000 - 0x00007fff472a2000 	C:\Windows\System32\win32u.dll
+0x00007fff30420000 - 0x00007fff306ba000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.4355_none_60b8b9eb71f62e16\COMCTL32.dll
+0x00007fff48cb0000 - 0x00007fff48cdb000 	C:\Windows\System32\GDI32.dll
+0x00007fff47a30000 - 0x00007fff47b47000 	C:\Windows\System32\gdi32full.dll
+0x00007fff47350000 - 0x00007fff473ed000 	C:\Windows\System32\msvcp_win.dll
+0x00007fff3f700000 - 0x00007fff3f70a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007fff48c80000 - 0x00007fff48caf000 	C:\Windows\System32\IMM32.DLL
+0x00007fff25670000 - 0x00007fff2567c000 	D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12\bin\vcruntime140_1.dll
+0x00007fff17be0000 - 0x00007fff17c6e000 	D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12\bin\msvcp140.dll
+0x00007ffed2ff0000 - 0x00007ffed3bd0000 	D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12\bin\server\jvm.dll
+0x00007fff485d0000 - 0x00007fff485d8000 	C:\Windows\System32\PSAPI.DLL
+0x00007fff2f7c0000 - 0x00007fff2f7c9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007fff49b20000 - 0x00007fff49b8b000 	C:\Windows\System32\WS2_32.dll
+0x00007fff3d330000 - 0x00007fff3d357000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007fff45120000 - 0x00007fff45132000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007fff25250000 - 0x00007fff2525a000 	D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12\bin\jimage.dll
+0x00007fff3d430000 - 0x00007fff3d614000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007fff269f0000 - 0x00007fff26a24000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007fff479a0000 - 0x00007fff47a22000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007fff1d640000 - 0x00007fff1d665000 	D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.4355_none_60b8b9eb71f62e16;D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12\bin\server
+
+VM Arguments:
+jvm_args: -Dcucumber.options -Dfile.separator=\ -Djava.class.version=61.0 -Djava.home=D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12 -Djava.library.path=D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;%JAVA_HOME%\bin;D:\bk compu\bk compu\bk compu\vv\java\gradle-8.9\bin;D:\bk compu\bk compu\bk compu\vv\java\selenium;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\casa\AppData\Local\Microsoft\WindowsApps;D:\Users\casa\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\casa\AppData\Roaming\npm;. -Djava.runtime.name=Java(TM) SE Runtime Environment -Djava.runtime.version=17.0.12+8-LTS-286 -Djava.specification.name=Java Platform API Specification -Djava.specification.vendor=Oracle Corporation -Djava.specification.version=17 -Djava.vendor=Oracle Corporation -Djava.vendor.url=https://java.oracle.com/ -Djava.vendor.url.bug=https://bugreport.java.com/bugreport/ -Djava.version=17.0.12 -Djava.version.date=2024-07-16 -Djava.vm.compressedOopsMode=32-bit -Djava.vm.info=mixed mode, sharing -Djava.vm.name=Java HotSpot(TM) 64-Bit Server VM -Djava.vm.specification.name=Java Virtual Machine Specification -Djava.vm.specification.vendor=Oracle Corporation -Djava.vm.specification.version=17 -Djava.vm.vendor=Oracle Corporation -Djava.vm.version=17.0.12+8-LTS-286 -Djdk.debug=release -Dlibrary.jansi.path=C:\Users\casa\.gradle\native\jansi\1.18\windows64 -Dline.separator=
+ -Dnative.encoding=Cp1252 -Dorg.gradle.appname=gradle -Dorg.gradle.internal.worker.tmpdir=D:\bk compu\bk compu\bk compu\automation\proyectos\SeleniumFree\build\tmp\test\work -Dos.arch=amd64 -Dos.name=Windows 10 -Dos.version=10.0 -Dpath.separator=; -Dsun.arch.data.model=64 -Dsun.boot.library.path=D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12\bin -Dsun.cpu.endian=little -Dsun.cpu.isalist=amd64 -Dsun.io.unicode.encoding=UnicodeLittle -Dsun.jnu.encoding=Cp1252 -Dsun.management.compiler=HotSpot 64-Bit Tiered Compilers -Dsun.os.patch.level -Duser.dir=D:\bk compu\bk compu\bk compu\automation\proyectos\SeleniumFree -Duser.home=C:\Users\casa -Duser.name=casa -Duser.script -Duser.timezone=America/Buenos_Aires -Xmx512m -Dfile.encoding=Cp1252 -Djava.io.tmpdir=C:\Users\casa\AppData\Local\Temp\ -Duser.country=419 -Duser.language=es -Duser.variant -ea 
+java_command: worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 12'
+java_class_path (initial): C:\Users\casa\.gradle\caches\8.9\workerMain\gradle-worker.jar;D:\bk compu\bk compu\bk compu\automation\proyectos\SeleniumFree\build\classes\java\test;D:\bk compu\bk compu\bk compu\automation\proyectos\SeleniumFree\build\resources\test;C:\Users\casa\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-java\4.23.0\2cc38c8dbef9d6e8774f05c2d2e8088180858ed4\selenium-java-4.23.0.jar;C:\Users\casa\.gradle\caches\modules-2\files-2.1\io.github.bonigarcia\webdrivermanager\5.9.2\61d2d9413ab230f401d2e9aac3bca0baf02b143c\webdrivermanager-5.9.2.jar;C:\Users\casa\.gradle\caches\modules-2\files-2.1\com.aventstack\extentreports-cucumber4-adapter\1.0.7\166c268f019c0d2951db3d28e2cb2f43d98d00ac\extentreports-cucumber4-adapter-1.0.7.jar;C:\Users\casa\.gradle\caches\modules-2\files-2.1\io.cucumber\cucumber-java\7.18.1\d82edc1b8c38e0582fdfceabb66d080eb706b734\cucumber-java-7.18.1.jar;C:\Users\casa\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-params\5.9.1\ffcd1013edaeee112be11fcddeb38882d79238de\junit-jupiter-params-5.9.1.jar;C:\Users\casa\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-engine\5.9.1\1bf771097bde296c3ab174861954e8aafaaf2e94\junit-jupiter-engine-5.9.1.jar;C:\Users\casa\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-api\5.9.1\7bb53fbc0173e9f6a9d21d58297af94b1f2f9ce1\junit-jupiter-api-5.9.1.jar;C:\Users\casa\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-engine\1.9.1\83591e5089d6cea5f324aa3ecca9b19d5a275803\junit-platform-engine-1.9.1.jar;C:\Users\casa\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-commons\1.9.1\3145f821b5cd10abcdc5f925baa5fffa6f1b628f\junit-platform-commons-1.9.1.jar;C:\Users\casa\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter\5.9.1\9274d3757e224bc02eae367bd481062a263c150b\junit-jupiter-5.9.1.jar;C:\Users\casa\.gradle\caches\modules-2\files-2.1\org.testng\testng\7.10.2\30742acada21960d4333a420
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 13                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 268435456                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 536870912                                 {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7602480                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122027880                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122027880                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 536870912                              {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=D:\bk compu\bk compu\bk compu\vv\java\jdk-17.0.12
+CLASSPATH=D:\bk compu\bk compu\bk compu\vv\java\gradle-8.9\lib\gradle-gradle-cli-main-8.9.jar
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;%JAVA_HOME%\bin;D:\bk compu\bk compu\bk compu\vv\java\gradle-8.9\bin;D:\bk compu\bk compu\bk compu\vv\java\selenium;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\casa\AppData\Local\Microsoft\WindowsApps;D:\Users\casa\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\casa\AppData\Roaming\npm
+USERNAME=casa
+LANG=es_ES.UTF-8
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.4597)
+OS uptime: 4 days 1:48 hours
+
+CPU: total 16 (initial active 16) (16 cores per cpu, 2 threads per core) family 23 model 113 stepping 0 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt
+
+Memory: 4k page, system-wide physical 16331M (3467M free)
+TotalPageFile size 18379M (AvailPageFile size 222M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 70M, peak: 325M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (17.0.12+8-LTS-286) for windows-amd64 JRE (17.0.12+8-LTS-286), built on Jun  5 2024 06:46:59 by "mach5one" with MS VC++ 17.6 (VS2022)
+
+END.
