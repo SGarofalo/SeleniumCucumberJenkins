@@ -14,17 +14,16 @@ Feature: Navigation bar
     #     When I go to a section using the navigation bar
 
     # con el outline sig q le voy a poder pasar 1 tabla de ejemplos
-    @Cursis
-    Scenario Outline: I can access the subpages through the navigation bar 
-        # Given I navigate to www.freerangetesters.com
-        When I go to <section> using the navigation bar
-        Examples:
-            | section | 
-            | Cursos |
-            | Recursos | 
-            | Blog |
-            | Mentorías | 
-            | Udemy | 
+    # Scenario Outline: I can access the subpages through the navigation bar 
+    #     # Given I navigate to www.freerangetesters.com
+    #     When I go to <section> using the navigation bar
+    #     Examples:
+    #         | section | 
+    #         | Cursos |
+    #         | Recursos | 
+    #         | Blog |
+    #         | Mentorías | 
+    #         | Udemy | 
 
     @Courses
     Scenario: Courses are presented correctly to potential customers
@@ -36,8 +35,7 @@ Feature: Navigation bar
     #     When I select Elegir Plan
     #     Then I can validate that the image is displayed
 
-    # @Plans @Courses 
-    @Plans
+    @Plans @Courses 
     Scenario: Users can select a plan when signing up
         # Given I navigate to www.freerangetesters.com
         When I select Elegir Plan
